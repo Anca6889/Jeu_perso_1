@@ -13,6 +13,7 @@ class Algorithme:
         
         self.player = None
         self.level = Level()
+        self.spawn_elements()
 
     def spawn_elements(self):
 
@@ -27,10 +28,13 @@ class Algorithme:
 
             if new_cell_content == '-':
                 self.level.coord[(self.player.coo_y, self.player.coo_x)] = "-"
-                self.level.coord[self.player.new_coo] = 'M'
+                self.level.coord[self.player.new_coo] = 'P'
                 self.player.coo_y = self.player.new_coo[0]
                 self.player.coo_x = self.player.new_coo[1]
-                
+
+            else:
+                pass
+            
     def print_grid(self):  # print la grille self.level.coord de manière représentative sur 20x20
 
         count = 0
@@ -42,5 +46,9 @@ class Algorithme:
         
 if __name__ == "__main__":
     algo = Algorithme()
+    algo.player.moove("right")
+    algo.control_pos()
+    algo.player.moove("right")
+    algo.control_pos()
     print(algo.print_grid())
-    print(algo.player.moove("right"))
+    

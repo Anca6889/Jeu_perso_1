@@ -14,6 +14,7 @@ class Player:
         self.coo_x = coo_x
         self.coo_y = coo_y
         self.new_coo = ()
+        
 
     def moove(self, direction):
 
@@ -27,3 +28,5 @@ class Player:
             self.new_coo = (self.coo_y+1, self.coo_x)
 
 
+# if __name__ == "__main__":
+   

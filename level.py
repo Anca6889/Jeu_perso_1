@@ -39,7 +39,6 @@ class Level:
                         self.path.append((map_y, map_x))
                 map_y, map_x = map_y + 1, 0
 
-
 if __name__ == "__main__":
 
     level = Level()
